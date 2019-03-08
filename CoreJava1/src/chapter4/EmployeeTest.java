@@ -1,19 +1,37 @@
 package chapter4;
 
+
 import java.time.LocalDate;
 
+/**
+ * @author xuzhida
+ * 类注释放在import之后，类之前
+ */
 class Employee
 {
     private final String name;
     private double salary;
     private LocalDate hireDay;
 
+    /**
+     * 变量描述
+     * @param n 名字
+     * @param s 公子
+     * @param year 出生年
+     * @param month 出生月
+     * @param day 出生日
+     */
     public Employee(String n, double s, int year,int month,int day)
     {
         name=n;
         salary=s;
         hireDay=LocalDate.of(year,month,day);
     }
+
+    /**
+     *return 描述
+     * @return 获取名字
+     */
     public String getName()
     {
         return name;
