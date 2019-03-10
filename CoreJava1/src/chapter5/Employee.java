@@ -29,4 +29,9 @@ class Employee extends Person
     {
         return String.format("an employee with a salary of %.2f ",salary);
     }
+
+    @Override
+    public String toString() {
+        return getClass().getName();
+    }
 }

@@ -3,6 +3,20 @@ package chapter5;
 import java.util.ArrayList;
 
 public class ArrayListTest {
+
+    /**
+     * Object ... values相当于Object []values
+     * @param values 需要进行比较的数组
+     * @return 返回最大值
+     */
+    public static double Max(double ... values)
+    {
+        double largest=Double.NEGATIVE_INFINITY;
+        for(double v:values)
+            if(v>largest)
+                largest=v;
+        return largest;
+    }
     public static void main(String []args)
     {
         /**
@@ -19,5 +33,7 @@ public class ArrayListTest {
         for(Employee e:staff)
             System.out.println("name: "+e.getName()
             +" salay: "+e.getSalary()+" date: "+e.getHireDay());
+
+        System.out.println(ArrayListTest.Max(3.14,23.4,5.6,1.2));
     }
 }
