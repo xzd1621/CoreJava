@@ -26,6 +26,38 @@ class TalkingClock
         this.internal=internal;
         this.beep=beep;
     }
+
+    /**
+     * 使用lambda表达式实现
+     *
+     */
+//    public void start(int internal,boolean beep)
+//    {
+//        Timer t=new Timer(internal,e ->
+//        {
+//            System.out.println("At the tone,the time is "+new Date());
+//            if(beep)Toolkit.getDefaultToolkit().beep();
+//        });
+//        t.start();
+//    }
+
+    /**
+     * 使用匿名内部类实现
+     */
+//    public void start(int internal,boolean beep)
+//    {
+//        ActionListener listener=new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                System.out.println("At the tone,the time is "+new Date());
+//                if(beep) Toolkit.getDefaultToolkit().beep();
+//            }
+//        };
+//        Timer t=new Timer(internal,listener);
+//        t.start();
+//    }
+
+
     public void start()
     {
         ActionListener listener=new TimePrinter();
